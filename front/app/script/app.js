@@ -21,8 +21,7 @@ define(function(require){
             })
     }])
 
-    webApp.run(["$templateCache",function($templateCache) {
-        var template=require("text!view/template.html")
+    var putTpl=["$templateCache","tpl",function($templateCache,template){
         template=$(template)
         for(var i=0 ; i<template.length;i++){
             var id=template[i]["id"]
@@ -31,6 +30,12 @@ define(function(require){
                 $templateCache.put(id,tpl);
             }
         }
+    }]
+
+    webApp.run(["$templateCache","$injector",function($templateCache,$injector) {
+        var template=require("text!view/template.html")
+        $injector.invoke(putTpl,this,{tpl:template})
+
     }]);
     return webApp
 })

@@ -10,18 +10,11 @@ define(function(require){
     var webApp=angular.module("webApp",["ui.router","ngSanitize",controllers.name])
     var template=require("text!view/template.html")
     webApp.config(["$stateProvider","$urlRouterProvider",function($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise("/state1");
+        $urlRouterProvider.otherwise("/d3Test");
         //
         // Now set up the states
         $stateProvider
-            .state('state1', {
-                url: "/state1",
-                templateUrl: "view/counttime.html"
-            })
-            .state('state2', {
-                url: "/state2",
-                templateUrl: "view/counttime2.html"
-            })
+
             .state('d3Test', {
                 url: "/d3Test",
                 templateUrl: "view/d3Test.html"

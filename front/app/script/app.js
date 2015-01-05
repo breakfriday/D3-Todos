@@ -19,6 +19,10 @@ define(function(require){
                 url: "/d3Test",
                 templateUrl: "view/d3Test.html"
             })
+            .state('objectAsData', {
+                url: "/objectAsData",
+                templateUrl: "view/objectAsData.html"
+            })
     }])
 
     var putTpl=["$templateCache","tpl",function($templateCache,template){

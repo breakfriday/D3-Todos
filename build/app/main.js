@@ -13,6 +13,7 @@ require.config({
         'directive':'script/directive',
         'css':'.././libs/require/css',
         'text':'.././libs/require/text',
+        "D3":'../libs/D3/d3',
         'angularUiRoute':'.././libs/angular/angular-ui-router.min',
         'css-builder': '.././libs/require/css-builder',
         'normalize': '.././libs/require/normalize'

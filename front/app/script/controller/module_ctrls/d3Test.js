@@ -5,13 +5,9 @@ define(function(require){
 
         var d3TestCtrl=["$scope","$element",function($scope, element){
         var d3=require("D3")
-        d3.select(element[0]).selectAll("p")
-            .data([1, 2, 3, 4, 5, 6])
-            .enter().append("p")
-            .style("border",function(){
-                return "1px solid red"
-            })
-            .text(function(d) { return "I’m number " + d + "!"; });
+
+        var viewModel= d3.select(element[0]).selectAll("p").data([1, 2, 3, 4, 5, 6]).enter()
+            viewModel.append("p") .style("border","1px solid red").text(function(d) { return "I’m number " + d + "!"; });
 
     }]
 
